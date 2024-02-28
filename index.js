@@ -3,7 +3,7 @@ const bodyparser=require('body-parser')
 const cors=require('cors')
 const app=express()
 // const port=process.env.PORT;
-const port=4000 || process.env.PORT
+const port= process.env.PORT
 const OpenAI=require('openai')
 const { Configuration, OpenAIApi } =OpenAI;
 const openai=new OpenAIApi(new Configuration({
@@ -30,6 +30,6 @@ app.post('/',async(req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log("example app ")
+    console.log(`example app ${port}`)
 })
 

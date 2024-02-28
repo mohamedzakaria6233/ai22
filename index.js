@@ -3,11 +3,11 @@ const bodyparser=require('body-parser')
 const cors=require('cors')
 const app=express()
 // const port=process.env.PORT;
-const port= process.env.PORT
+const port= process.env.PORT ||4000
 const OpenAI=require('openai')
 const { Configuration, OpenAIApi } =OpenAI;
 const openai=new OpenAIApi(new Configuration({
-    apiKey:"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"
+    apiKey:process.env.SECRET
 }))
 
 
